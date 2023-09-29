@@ -1,0 +1,20 @@
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap');
+</style>
+<div class="header">
+<img src="https://clipartcraft.com/images/pokemon-clipart-pokeball-8.png"
+width="120"
+/>
+<p class="title">Pokedex</p>
+</div>
+
+
+<div class="pokemon-list">
+<app-pokemon-card  
+*ngFor="let pokemon of pokemonService.pokemons; index as i" 
+[pokemon] = "pokemon['name']"
+[numero] = "i + 1"
+></app-pokemon-card>
+</div>
+
